@@ -1,0 +1,71 @@
+#wrapper {
+  display: flex;
+  height: 600px;
+}
+.column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  background: #66D8A4;
+  margin: 1em;
+  padding: 1em;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 300px;
+}
+
+.row {
+  border: 4px solid white;
+}
+
+
+.info-box {
+  display: block;
+  width: inherit;
+  height: 7%;
+  margin: 0;
+  padding: 1px 1px 1px 1px;
+}
+
+.header {
+  width: inherit;
+  height: 7%;
+  margin: 0;
+  text-align: center;
+}
+
+.box-1 {
+  margin: 1em;
+  padding: 1em;
+  flex-grow: 1;
+  display: flex;
+  background-color: #fdd3c7;
+}
+
+.box-2 {
+  margin: 1em;
+  padding: 1em;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(ribs.png);
+}
+.column:first-child > :last-child, .column:last-child > :first-child {
+  flex-grow: 2;
+}
+@media (max-width: 800px) {
+  #wrapper {
+    flex-direction: column;
+  }
+  .column {
+    display: contents;
+  }
